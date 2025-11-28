@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nihith Sai Portfolio</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <header>
+        <h2>Nihith Sai</h2>
+        <nav>
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- HOME / ABOUT -->
+    <section id="home">
+        <div class="home-cont">
+            <div class="profile-img">
+                <img src="img/nh.jpg" alt="profile-img">
+            </div>
+            <div class="divider-sep"></div>
+            <div class="home-desc">
+                <h1>Hi, I'm Nihith Sai Vaikuntapu</h1>
+                <p>
+                    A CSE student specializing in AI & Machine Learning.
+                </p>
+                <p>
+                    I'm passionate about building intelligent solutions.
+                </p>
+                <p>
+                    Skilled in modern web development technologies.
+                </p>
+                <p>
+                    Always exploring new ideas and pushing myself to grow.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <h1>Skills</h1>
+
+        <div class="skill">
+            <span>HTML</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>CSS</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 80%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>JavaScript (Basic)</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 60%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>Python</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>Git & GitHub</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+        </div>
+
+        <div class="skill">
+            <span>Machine Learning Basics</span>
+            <div class="progress-bar">
+                <div class="progress" style="width: 55%;"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <h1>Projects</h1>
+
+        <div class="project-box">
+            <h2>✔ To-Do List Web App</h2>
+            <p>A beginner project built using HTML, CSS & basic JS to manage daily tasks.</p>
+        </div>
+
+        <div class="project-box">
+            <h2>✔ Weather Search Page</h2>
+            <p>A simple weather lookup using API (OpenWeather) with clean UI.</p>
+        </div>
+
+        <div class="project-box">
+            <h2>✔ Basic Portfolio Website</h2>
+            <p>The first version of my personal portfolio with responsive layout.</p>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <h1>Contact Me</h1>
+        <p>Email: <b><a href="mailto:nihithsai10@gmail.com">nihithsai10@gmail.com</a></b></p>
+        <p>GitHub: <a href="https://github.com/nihithsai" target="_blank">github.com/nihithsai</a></p>
+        <p>Feel free to reach out for collaborations or project ideas!</p>
+    </section>
+
+    <!-- JS -->
+    <script>
+        const sections = document.querySelectorAll("section");
+        const navLinks = document.querySelectorAll(".nav-link");
+
+        window.addEventListener("scroll", () => {
+            let current = "";
+
+            sections.forEach(sec => {
+                const top = window.scrollY;
+                if (top >= sec.offsetTop - 150) {
+                    current = sec.getAttribute("id");
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove("active");
+                if (link.getAttribute("href") === "#" + current) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
